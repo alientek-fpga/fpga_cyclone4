@@ -1,0 +1,29 @@
+E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module tb_top_key_beep
+
+Top level modules:
+	tb_top_key_beep
+
+} {} {}} E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module beep_control
+
+Top level modules:
+	beep_control
+
+} {} {}} E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module key_debounce
+
+Top level modules:
+	key_debounce
+
+} {} {}} E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module top_key_beep
+
+Top level modules:
+	top_key_beep
+
+} {} {}}

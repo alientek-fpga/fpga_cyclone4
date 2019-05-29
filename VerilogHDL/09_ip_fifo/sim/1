@@ -1,0 +1,3 @@
+onerror {resume}
+::add watch sim:/ip_fifo_tb/u1_ip_fifo/u_fifo/data -noglob -x -11210.0 -y -60.0 -radix default -radixenum default
+

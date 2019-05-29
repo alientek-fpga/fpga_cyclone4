@@ -1,0 +1,105 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\ip_fifo\par\simulation\modelsim
+vfifo
+IfAMDAY?ogAZJW7cjH<VoG0
+VV>zTJZAS3=@SN5^iJDCZO0
+Z1 dC:\Users\Administrator\Desktop\ip_fifo\par\simulation\modelsim
+w1530856712
+8C:/Users/Administrator/Desktop/ip_fifo/par/ipcore/fifo.v
+FC:/Users/Administrator/Desktop/ip_fifo/par/ipcore/fifo.v
+L0 39
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 [7[aLQi2dbQdK?J3MT4O?2
+!s85 0
+!s108 1531906006.935000
+!s107 C:/Users/Administrator/Desktop/ip_fifo/par/ipcore/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/ip_fifo/par/ipcore|C:/Users/Administrator/Desktop/ip_fifo/par/ipcore/fifo.v|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/par/ipcore -O0
+vfifo_rd
+IliVaE>NAd:0WSl5RbU3<H3
+VFz:4]Fai_L_fA@VWOUbBZ0
+R1
+w1531442226
+8C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_rd.v
+FC:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_rd.v
+L0 22
+R2
+r1
+31
+R3
+Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl -O0
+!i10b 1
+!s100 iYkWYa?`[lDK88kgOc]dg3
+!s85 0
+!s108 1531906006.817000
+!s107 C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_rd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl|C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_rd.v|
+!s101 -O0
+vfifo_wr
+Ie<;E]UKO^ca?K<WUQdYNg1
+V0OV[24XUC`4]zT@j5@oZM3
+R1
+w1531442199
+8C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_wr.v
+FC:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_wr.v
+L0 22
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 261<d59<D]jG;>nm1bJ:D0
+!s85 0
+!s108 1531906006.729000
+!s107 C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_wr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl|C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_wr.v|
+!s101 -O0
+vip_fifo
+I>VXL2<`FK]=haemKoLJ@M3
+V<>bSk<^B8?cHIa2h][fga3
+R1
+w1531442289
+8C:/Users/Administrator/Desktop/ip_fifo/rtl/ip_fifo.v
+FC:/Users/Administrator/Desktop/ip_fifo/rtl/ip_fifo.v
+L0 22
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 [>23SYC?8CgK2f><@hNYj2
+!s85 0
+!s108 1531906006.877000
+!s107 C:/Users/Administrator/Desktop/ip_fifo/rtl/ip_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl|C:/Users/Administrator/Desktop/ip_fifo/rtl/ip_fifo.v|
+!s101 -O0
+vip_fifo_tb
+!i10b 1
+!s100 KzU>_GYT>jG87NSW38zL22
+I;TQZT@]NK9`[0K6QhXRjY3
+VR[<>LbXaC>Wg0?_W2i@^k1
+R1
+w1531012956
+8C:/Users/Administrator/Desktop/ip_fifo/par/../sim/ip_fifo_tb.v
+FC:/Users/Administrator/Desktop/ip_fifo/par/../sim/ip_fifo_tb.v
+L0 24
+R2
+r1
+!s85 0
+31
+!s108 1531906006.996000
+!s107 C:/Users/Administrator/Desktop/ip_fifo/par/../sim/ip_fifo_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/ip_fifo/par/../sim|C:/Users/Administrator/Desktop/ip_fifo/par/../sim/ip_fifo_tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/par/../sim -O0

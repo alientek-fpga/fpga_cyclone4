@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Verilog/CX/flow_led/par/simulation/modelsim
+T_opt
+!s110 1547696437
+VcRXkIm;7`<5_dU]P2GO>@2
+04 11 4 work flow_led_tb fast 0
+=1-502b73d03501-5c3ff934-3af-2038
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L cycloneive_ver -L gate_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vflow_led
+Z1 !s110 1547696436
+!i10b 1
+!s100 a2ml4cYTfzl6FHEUJ;Q651
+IVElo>:ok=[@gX^_ggZCX?3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1547694082
+8flow_led_8_1200mv_85c_slow.vo
+Fflow_led_8_1200mv_85c_slow.vo
+L0 31
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1547696436.557000
+!s107 flow_led_8_1200mv_85c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|flow_led_8_1200mv_85c_slow.vo|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+. -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vflow_led_tb
+R1
+!i10b 1
+!s100 4jGG`2=YY_1]im>S^mo4G3
+IJ:X1l8h_Hb1P5A>ObbU5d1
+R2
+R0
+w1547439090
+8E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt
+FE:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1547696436.657000
+!s107 E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim|E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

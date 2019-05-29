@@ -1,0 +1,282 @@
+# Reading D:/modeltech64_10.4/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# do flow_led_run_msim_gate_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# 
+# vmap altera_ver ./verilog_libs/altera_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet altera_ver ./verilog_libs/altera_ver 
+# Copying D:/modeltech64_10.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/modeltech64_10.4/win64/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# vlog -vlog01compat -work altera_ver {d:/altera/13.1/quartus/eda/sim_lib/altera_primitives.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 11:40:35 on Jan 17,2019
+# vlog -reportprogress 300 -vlog01compat -work altera_ver d:/altera/13.1/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_HIGH
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 11:40:35 on Jan 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/cycloneive_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/cycloneive_ver".
+# 
+# vmap cycloneive_ver ./verilog_libs/cycloneive_ver
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet cycloneive_ver ./verilog_libs/cycloneive_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work cycloneive_ver {d:/altera/13.1/quartus/eda/sim_lib/cycloneive_atoms.v}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 11:40:35 on Jan 17,2019
+# vlog -reportprogress 300 -vlog01compat -work cycloneive_ver d:/altera/13.1/quartus/eda/sim_lib/cycloneive_atoms.v 
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFE
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS
+# -- Compiling UDP CYCLONEIVE_PRIM_DFFEAS_HIGH
+# -- Compiling module cycloneive_dffe
+# -- Compiling module cycloneive_mux21
+# -- Compiling module cycloneive_mux41
+# -- Compiling module cycloneive_and1
+# -- Compiling module cycloneive_and16
+# -- Compiling module cycloneive_bmux21
+# -- Compiling module cycloneive_b17mux21
+# -- Compiling module cycloneive_nmux21
+# -- Compiling module cycloneive_b5mux21
+# -- Compiling module cycloneive_latch
+# -- Compiling module cycloneive_routing_wire
+# -- Compiling module cycloneive_m_cntr
+# -- Compiling module cycloneive_n_cntr
+# -- Compiling module cycloneive_scale_cntr
+# -- Compiling module cycloneive_pll_reg
+# -- Compiling module cycloneive_pll
+# -- Compiling module cycloneive_lcell_comb
+# -- Compiling module cycloneive_ff
+# -- Compiling module cycloneive_ram_pulse_generator
+# -- Compiling module cycloneive_ram_register
+# -- Compiling module cycloneive_ram_block
+# -- Compiling module cycloneive_mac_data_reg
+# -- Compiling module cycloneive_mac_sign_reg
+# -- Compiling module cycloneive_mac_mult_internal
+# -- Compiling module cycloneive_mac_mult
+# -- Compiling module cycloneive_mac_out
+# -- Compiling module cycloneive_io_ibuf
+# -- Compiling module cycloneive_io_obuf
+# -- Compiling module cycloneive_ddio_out
+# -- Compiling module cycloneive_ddio_oe
+# -- Compiling module cycloneive_pseudo_diff_out
+# -- Compiling module cycloneive_io_pad
+# -- Compiling module cycloneive_ena_reg
+# -- Compiling module cycloneive_clkctrl
+# -- Compiling module cycloneive_rublock
+# -- Compiling module cycloneive_apfcontroller
+# -- Compiling module cycloneive_termination_ctrl
+# -- Compiling module cycloneive_termination_rupdn
+# -- Compiling module cycloneive_termination
+# -- Compiling module cycloneive_jtag
+# -- Compiling module cycloneive_crcblock
+# -- Compiling module cycloneive_oscillator
+# 
+# Top level modules:
+# 	cycloneive_dffe
+# 	cycloneive_and1
+# 	cycloneive_and16
+# 	cycloneive_bmux21
+# 	cycloneive_b17mux21
+# 	cycloneive_nmux21
+# 	cycloneive_b5mux21
+# 	cycloneive_pll_reg
+# 	cycloneive_pll
+# 	cycloneive_lcell_comb
+# 	cycloneive_ff
+# 	cycloneive_ram_block
+# 	cycloneive_mac_mult
+# 	cycloneive_mac_out
+# 	cycloneive_io_ibuf
+# 	cycloneive_io_obuf
+# 	cycloneive_ddio_out
+# 	cycloneive_ddio_oe
+# 	cycloneive_pseudo_diff_out
+# 	cycloneive_io_pad
+# 	cycloneive_clkctrl
+# 	cycloneive_rublock
+# 	cycloneive_apfcontroller
+# 	cycloneive_termination
+# 	cycloneive_jtag
+# 	cycloneive_crcblock
+# 	cycloneive_oscillator
+# End time: 11:40:36 on Jan 17,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work gate_work 
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+. {flow_led_8_1200mv_85c_slow.vo}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 11:40:36 on Jan 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+." flow_led_8_1200mv_85c_slow.vo 
+# -- Compiling module flow_led
+# 
+# Top level modules:
+# 	flow_led
+# End time: 11:40:36 on Jan 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim {E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt}
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 11:40:36 on Jan 17,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim" E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt 
+# -- Compiling module flow_led_tb
+# 
+# Top level modules:
+# 	flow_led_tb
+# End time: 11:40:36 on Jan 17,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  flow_led_tb
+# vsim -gui "+altera" -l msim_transcript -do "flow_led_run_msim_gate_verilog.do" 
+# Start time: 11:40:36 on Jan 17,2019
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.flow_led_tb(fast)
+# Loading work.flow_led(fast)
+# Loading cycloneive_ver.cycloneive_io_obuf(fast)
+# Loading cycloneive_ver.cycloneive_io_ibuf(fast)
+# Loading cycloneive_ver.cycloneive_clkctrl(fast)
+# Loading cycloneive_ver.cycloneive_mux41(fast)
+# Loading cycloneive_ver.cycloneive_ena_reg(fast)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__1)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__2)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__3)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__4)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__5)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__6)
+# Loading altera_ver.dffeas(fast)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__7)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__8)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__9)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__10)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__11)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__12)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__13)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__14)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__15)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__16)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__17)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__18)
+# Loading cycloneive_ver.cycloneive_lcell_comb(fast__19)
+# Loading instances from flow_led_8_1200mv_85c_v_slow.sdo
+# Loading timing data from flow_led_8_1200mv_85c_v_slow.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /flow_led_tb File: E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt
+# 
+# add wave *
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt(23)
+#    Time: 1100 ns  Iteration: 0  Instance: /flow_led_tb
+# Break in Module flow_led_tb at E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt line 23
+# End time: 11:41:12 on Jan 17,2019, Elapsed time: 0:00:36
+# Errors: 0, Warnings: 0

@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+dE:\WarShip_Develop\EP4CE10\Verilog\2_key_led\sim
+vbeep_control
+VH3odQ<j4H14IX6`@UPf9l3
+r1
+!s85 0
+31
+I0<>b;YeP8?mMS[R1FMfWK0
+Z0 dE:\WarShip_Develop\EP4CE10\Verilog\3_top_key_beep\sim
+w1531295262
+8E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v
+FE:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v
+L0 27
+Z1 OL;L;10.1c;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!s100 Fkh1;eYV=]S39TTBcWzCc0
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v|
+!s108 1536282886.841000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/beep_control.v|
+!i10b 1
+vkey_debounce
+VkL_H91^NMX9>?QOdW;E:U1
+r1
+31
+IDIXKXYj>`C4nUW>a3FRIU3
+Z3 dE:\WarShip_Develop\EP4CE10\Verilog\3_top_key_beep\sim
+w1536282882
+8E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v
+FE:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v
+L0 28
+R1
+R2
+!s85 0
+!s100 a1?eFKf[m`PoZV:<NW7f73
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v|
+!s108 1536282886.994000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/key_debounce.v|
+!i10b 1
+vtb_top_key_beep
+V@;MHIPac1WJ5WDCW>`ihj0
+r1
+31
+IjQ89XUma<KYdkKNU7lOe31
+R3
+w1536282586
+8E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v
+FE:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v
+L0 28
+R1
+R2
+!s85 0
+!s100 ;gC?aY^:f@5IeP:ebG[F01
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v|
+!s108 1536282886.697000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/sim/tb/tb_top_key_beep.v|
+!i10b 1
+vtop_key_beep
+V[gOSPD]Rlb3Q2LH0[b9^?3
+r1
+31
+I_:0kjJ3<Db>X=36IS?=WQ1
+R3
+w1531295036
+8E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v
+FE:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v
+L0 27
+R1
+R2
+!s85 0
+!s100 eRbbdoV8CF6gDFjX`SZK81
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v|
+!i10b 1
+!s108 1536282887.191000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/3_top_key_beep/rtl/top_key_beep.v|

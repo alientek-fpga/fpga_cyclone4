@@ -1,0 +1,28 @@
+`timescale 1 ns/ 1 ns
+module flow_led_tb();
+// constants
+// general purpose registers
+// test vector input registers
+reg sys_clk;
+reg sys_rst_n;
+// wires
+wire [3:0]  led;
+
+// assign statements (if any)
+flow_led i1 (
+// port map - connection between master ports and signals/registers
+    .led(led),
+    .sys_clk(sys_clk),
+    .sys_rst_n(sys_rst_n)
+);
+initial
+begin
+    sys_clk             = 1'b0;
+    sys_rst_n           = 1'b0;   // 复位
+    #100  sys_rst_n     = 1'b1;   // 在第100ns的时候复位信号拉高
+    #1000 $stop;
+end
+
+always #10 sys_clk = ~sys_clk;
+
+endmodule

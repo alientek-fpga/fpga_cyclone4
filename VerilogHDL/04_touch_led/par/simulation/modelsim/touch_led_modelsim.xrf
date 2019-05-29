@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, E:/WarShip_Develop/EP4CE10/Verilog/4_touch_led/rtl/touch_led.v
+source_file = 1, E:/WarShip_Develop/EP4CE10/Verilog/4_touch_led/par/db/touch_led.cbx.xml
+design_name = touch_led
+instance = comp, \led~output\, led~output, touch_led, 1
+instance = comp, \sys_clk~input\, sys_clk~input, touch_led, 1
+instance = comp, \sys_clk~inputclkctrl\, sys_clk~inputclkctrl, touch_led, 1
+instance = comp, \touch_key~input\, touch_key~input, touch_led, 1
+instance = comp, \touch_key_d0~feeder\, touch_key_d0~feeder, touch_led, 1
+instance = comp, \sys_rst_n~input\, sys_rst_n~input, touch_led, 1
+instance = comp, \sys_rst_n~inputclkctrl\, sys_rst_n~inputclkctrl, touch_led, 1
+instance = comp, \touch_key_d1~feeder\, touch_key_d1~feeder, touch_led, 1
+instance = comp, \switch~0\, switch~0, touch_led, 1
+instance = comp, \led~reg0feeder\, led~reg0feeder, touch_led, 1
+instance = comp, \led~reg0\, led~reg0, touch_led, 1

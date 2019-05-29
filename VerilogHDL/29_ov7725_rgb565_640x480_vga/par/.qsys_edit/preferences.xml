@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="47" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="175" />
+   <clocksource preferredWidth="174" />
+   <frequency preferredWidth="155" />
+  </columns>
+ </clocktable>
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <library
+   expandedCategories="Library/Bridges and Adapters/DMA,Library/DSP,Project,Library,Library/DSP/Video and Image Processing,Library/Bridges and Adapters" />
+</preferences>

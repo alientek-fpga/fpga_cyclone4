@@ -1,0 +1,41 @@
+m255
+K3
+13
+cModel Technology
+dD:\EDASoft\modeltech64_10.1c\win64
+vkey_led
+V[@;2j7F@n1n>oLOI`7c:H0
+r1
+!s85 0
+31
+Ii]F7HOR9M@h@YkAZTP;f@3
+Z0 dE:\WarShip_Develop\EP4CE10\Verilog\2_key_led\sim
+w1536231174
+8E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v
+FE:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v
+L0 28
+Z1 OL;L;10.1c;51
+Z2 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 Q=mXeb:m5_IM8iAV@zHbo0
+!s108 1536231436.605000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v|
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v|
+vtb_key_led
+VMPJA;n3`A2`]dDahaU>U11
+r1
+31
+IGO?`Y8`H^CWOhf?;QE=<h2
+Z3 dE:\WarShip_Develop\EP4CE10\Verilog\2_key_led\sim
+w1536226418
+8E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v
+FE:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v
+L0 2
+R1
+R2
+!s85 0
+!s100 XlZD@@VI0QaXHGhodgm6k1
+!s108 1536231436.351000
+!s107 E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v|
+!s90 -reportprogress|300|-work|work|-vopt|E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v|
+!i10b 1

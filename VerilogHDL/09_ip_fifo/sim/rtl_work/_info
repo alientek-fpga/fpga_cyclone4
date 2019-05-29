@@ -1,0 +1,165 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Verilog/ip_fifo/sim
+T_opt
+!s110 1531041222
+V;GF;EMQ><`85<<]Kd=QKJ2
+04 10 4 work ip_fifo_tb fast 0
+=1-1831bf080ea1-5b41d5c6-85-117d8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vfifo
+Z1 !s110 1531041221
+!i10b 1
+!s100 R25<^FQLn:g]YPbDQW;3m0
+Il?023R;1RAgCOzH=jng;E0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1531018905
+8F:/DEVELOP/ip_fifo/par/ipcore/fifo.v
+FF:/DEVELOP/ip_fifo/par/ipcore/fifo.v
+Z3 L0 39
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1531041221.293000
+!s107 F:/DEVELOP/ip_fifo/par/ipcore/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/par/ipcore|F:/DEVELOP/ip_fifo/par/ipcore/fifo.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+F:/DEVELOP/ip_fifo/par/ipcore -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vip_fifo
+!s110 1531041220
+!i10b 1
+!s100 62V;kz^N9a;1dGS7oOScS3
+Izc[=n0CI3P:TAnEKKFk2?2
+R2
+R0
+w1531017616
+8F:/DEVELOP/ip_fifo/rtl/ip_fifo.v
+FF:/DEVELOP/ip_fifo/rtl/ip_fifo.v
+Z7 L0 22
+R4
+r1
+!s85 0
+31
+!s108 1531041220.885000
+!s107 F:/DEVELOP/ip_fifo/rtl/ip_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/rtl|F:/DEVELOP/ip_fifo/rtl/ip_fifo.v|
+!i113 0
+R5
+Z8 !s92 -vlog01compat -work work +incdir+F:/DEVELOP/ip_fifo/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vip_fifo_tb
+R1
+!i10b 1
+!s100 8mQmfB0NTAh8PmQiF2ZFT2
+I2Y>VOjjG9BeS3oFGgNRcb1
+R2
+R0
+w1531010150
+8F:/DEVELOP/ip_fifo/par/../sim/ip_fifo_tb.v
+FF:/DEVELOP/ip_fifo/par/../sim/ip_fifo_tb.v
+L0 23
+R4
+r1
+!s85 0
+31
+!s108 1531041221.748000
+!s107 F:/DEVELOP/ip_fifo/par/../sim/ip_fifo_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/par/../sim|F:/DEVELOP/ip_fifo/par/../sim/ip_fifo_tb.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+F:/DEVELOP/ip_fifo/par/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vpll_clk
+R1
+!i10b 1
+!s100 W;o>?RdOKF=eGcPKanoDS3
+I:D07Cj2fg^]<;^<`nZkSF1
+R2
+R0
+w1531017074
+8F:/DEVELOP/ip_fifo/par/ipcore/pll_clk.v
+FF:/DEVELOP/ip_fifo/par/ipcore/pll_clk.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1531041221.435000
+!s107 F:/DEVELOP/ip_fifo/par/ipcore/pll_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/par/ipcore|F:/DEVELOP/ip_fifo/par/ipcore/pll_clk.v|
+!i113 0
+R5
+R6
+vpll_clk_altpll
+R1
+!i10b 1
+!s100 l650Dk@G9]X?lVK;gcMRU0
+IiFhPX^<i39_^<99a`lTW01
+R2
+R0
+w1531017635
+8F:/DEVELOP/ip_fifo/par/db/pll_clk_altpll.v
+FF:/DEVELOP/ip_fifo/par/db/pll_clk_altpll.v
+L0 30
+R4
+r1
+!s85 0
+31
+!s108 1531041221.607000
+!s107 F:/DEVELOP/ip_fifo/par/db/pll_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/par/db|F:/DEVELOP/ip_fifo/par/db/pll_clk_altpll.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+F:/DEVELOP/ip_fifo/par/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vrd_fifo
+R1
+!i10b 1
+!s100 cK7?o6U_Q]8HeA7@?HV<@1
+ISEHDVjWoRLEFcmI_CkR]Y0
+R2
+R0
+w1531012566
+8F:/DEVELOP/ip_fifo/rtl/rd_fifo.v
+FF:/DEVELOP/ip_fifo/rtl/rd_fifo.v
+R7
+R4
+r1
+!s85 0
+31
+!s108 1531041221.152000
+!s107 F:/DEVELOP/ip_fifo/rtl/rd_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/rtl|F:/DEVELOP/ip_fifo/rtl/rd_fifo.v|
+!i113 0
+R5
+R8
+vwr_fifo
+R1
+!i10b 1
+!s100 1dMQNAX?QPkg1<OSkM2=k3
+IQi@^WF[>UnaZ=b[Ef3[k32
+R2
+R0
+w1531018878
+8F:/DEVELOP/ip_fifo/rtl/wr_fifo.v
+FF:/DEVELOP/ip_fifo/rtl/wr_fifo.v
+R7
+R4
+r1
+!s85 0
+31
+!s108 1531041221.011000
+!s107 F:/DEVELOP/ip_fifo/rtl/wr_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/DEVELOP/ip_fifo/rtl|F:/DEVELOP/ip_fifo/rtl/wr_fifo.v|
+!i113 0
+R5
+R8

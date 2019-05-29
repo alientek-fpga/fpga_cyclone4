@@ -1,0 +1,96 @@
+# Reading D:/program/modelsim/modelsim_ae/tcl/vsim/pref.tcl 
+# do ip_fifo_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\program\modelsim\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\program\modelsim\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl {C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_wr.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fifo_wr
+# 
+# Top level modules:
+# 	fifo_wr
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl {C:/Users/Administrator/Desktop/ip_fifo/rtl/fifo_rd.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fifo_rd
+# 
+# Top level modules:
+# 	fifo_rd
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/rtl {C:/Users/Administrator/Desktop/ip_fifo/rtl/ip_fifo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ip_fifo
+# 
+# Top level modules:
+# 	ip_fifo
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/par/ipcore {C:/Users/Administrator/Desktop/ip_fifo/par/ipcore/fifo.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fifo
+# 
+# Top level modules:
+# 	fifo
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/ip_fifo/par/../sim {C:/Users/Administrator/Desktop/ip_fifo/par/../sim/ip_fifo_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ip_fifo_tb
+# 
+# Top level modules:
+# 	ip_fifo_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  ip_fifo_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ip_fifo_tb 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.ip_fifo_tb
+# Loading work.ip_fifo
+# Loading work.fifo
+# Loading altera_mf_ver.dcfifo
+# Loading altera_mf_ver.dcfifo_mixed_widths
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.dcfifo_low_latency
+# Loading altera_mf_ver.ALTERA_MF_HINT_EVALUATION
+# Loading altera_mf_ver.dcfifo_dffpipe
+# Loading work.fifo_wr
+# Loading work.fifo_rd
+# Loading altera_mf_ver.dcfifo_async
+# Loading altera_mf_ver.dcfifo_fefifo
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+add wave -position insertpoint  \
+sim:/ip_fifo_tb/u1_ip_fifo/sys_clk \
+sim:/ip_fifo_tb/u1_ip_fifo/sys_rst_n \
+sim:/ip_fifo_tb/u1_ip_fifo/data \
+sim:/ip_fifo_tb/u1_ip_fifo/q \
+sim:/ip_fifo_tb/u1_ip_fifo/wrreq \
+sim:/ip_fifo_tb/u1_ip_fifo/rdreq \
+sim:/ip_fifo_tb/u1_ip_fifo/wrempty \
+sim:/ip_fifo_tb/u1_ip_fifo/wrfull \
+sim:/ip_fifo_tb/u1_ip_fifo/rdempty \
+sim:/ip_fifo_tb/u1_ip_fifo/rdfull
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+run

@@ -1,0 +1,107 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/FPGA
+T_opt
+!s110 1523495885
+Vnl0VjnAfIB:U>]JUX@e7<2
+04 21 4 work top_cymometer_vlg_tst fast 0
+=2-1831bf080ea1-5aceb3cd-280-2408
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OL;O;10.4;61
+R0
+T_opt1
+!s110 1523497717
+VE7Mg12n2agkR3IkXLH]kS3
+04 16 4 work tb_top_cymometer fast 0
+=1-1831bf080ea1-5acebaf4-3a6-250c
+R1
+n@_opt1
+R2
+vclk_div
+Z3 !s110 1523497695
+!i10b 1
+!s100 K_<Z7SfoXmT9@kGX6IL?@1
+I8T]WbYOmnSK=52cm`5gm;3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 dF:/zhanjiam01/cymometer/sim/tb
+w1523493588
+8F:/zhanjiam01/cymometer/rtl/clk_div.v
+FF:/zhanjiam01/cymometer/rtl/clk_div.v
+L0 3
+Z6 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1523497695.412000
+!s107 F:/zhanjiam01/cymometer/rtl/clk_div.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/zhanjiam01/cymometer/rtl/clk_div.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcymometer
+R3
+!i10b 1
+!s100 k^D4ZB1B0omN8;@K=WSj92
+I6YVjB<54jF]J_L7abKcWh0
+R4
+R5
+w1523433577
+8F:/zhanjiam01/cymometer/rtl/cymometer.v
+FF:/zhanjiam01/cymometer/rtl/cymometer.v
+Z8 L0 24
+R6
+r1
+!s85 0
+31
+!s108 1523497695.490000
+!s107 F:/zhanjiam01/cymometer/rtl/cymometer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/zhanjiam01/cymometer/rtl/cymometer.v|
+!i113 0
+R7
+vtb_top_cymometer
+R3
+!i10b 1
+!s100 f6FHQZ8L4LMSimbaD8M300
+I_?KGY0zanR9hcdj7o=;DM3
+R4
+R5
+w1523497564
+8F:/zhanjiam01/cymometer/sim/tb_top_cymometer.v
+FF:/zhanjiam01/cymometer/sim/tb_top_cymometer.v
+L0 29
+R6
+r1
+!s85 0
+31
+!s108 1523497695.670000
+!s107 F:/zhanjiam01/cymometer/sim/tb_top_cymometer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/zhanjiam01/cymometer/sim/tb_top_cymometer.v|
+!i113 0
+R7
+vtop_cymometer
+R3
+!i10b 1
+!s100 TN0VVdfAXa8FZiYPmcc;=0
+IedHdV727Skz^AiK1ZCUWm0
+R4
+R5
+w1523493388
+8F:/zhanjiam01/cymometer/rtl/top_cymometer.v
+FF:/zhanjiam01/cymometer/rtl/top_cymometer.v
+R8
+R6
+r1
+!s85 0
+31
+!s108 1523497695.592000
+!s107 F:/zhanjiam01/cymometer/rtl/top_cymometer.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/zhanjiam01/cymometer/rtl/top_cymometer.v|
+!i113 0
+R7

@@ -1,0 +1,15 @@
+E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/rtl/key_led.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module key_led
+
+Top level modules:
+	key_led
+
+} {} {}} E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v {1 {vlog -work work -vopt E:/WarShip_Develop/EP4CE10/Verilog/2_key_led/sim/tb/tb_key_led.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module tb_key_led
+
+Top level modules:
+	tb_key_led
+
+} {} {}}

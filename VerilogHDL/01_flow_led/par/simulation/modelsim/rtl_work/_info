@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Verilog/CX/flow_led/par/simulation/modelsim
+T_opt
+!s110 1547696072
+VCi2T_CXDW^FTQnDngeke81
+04 11 4 work flow_led_tb fast 0
+=1-502b73d03501-5c3ff7c7-26b-110c
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vflow_led
+Z1 !s110 1547696071
+!i10b 1
+!s100 2aOMUk[_8[R[=3gXe[5R>2
+I@[mCaW8PdcDaHIbmL5a<S0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1531275385
+8E:/Verilog/CX/flow_led/rtl/flow_led.v
+FE:/Verilog/CX/flow_led/rtl/flow_led.v
+L0 22
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1547696071.052000
+!s107 E:/Verilog/CX/flow_led/rtl/flow_led.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Verilog/CX/flow_led/rtl|E:/Verilog/CX/flow_led/rtl/flow_led.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -vlog01compat -work work +incdir+E:/Verilog/CX/flow_led/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vflow_led_tb
+R1
+!i10b 1
+!s100 4jGG`2=YY_1]im>S^mo4G3
+IJ:X1l8h_Hb1P5A>ObbU5d1
+R2
+R0
+w1547439090
+8E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt
+FE:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1547696071.175000
+!s107 E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim|E:/Verilog/CX/flow_led/par/simulation/modelsim/flow_led_tb.vt|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/Verilog/CX/flow_led/par/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

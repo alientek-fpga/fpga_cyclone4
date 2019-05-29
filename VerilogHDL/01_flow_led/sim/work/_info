@@ -1,0 +1,48 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/SourceCode/Pioneer/1_Verilog/27_sdram_rw_test/sim
+vflow_led
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ePl<RWfjAWFikmVPZA_C12
+I=d9dWBnU?:0cW>aea;R>@2
+Z1 dE:/Verilog/CX/flow_led/sim
+w1547693954
+8E:/Verilog/CX/flow_led/sim/tb/flow_led.v
+FE:/Verilog/CX/flow_led/sim/tb/flow_led.v
+L0 22
+Z2 OL;L;10.4;61
+!s108 1547693960.483000
+!s107 E:/Verilog/CX/flow_led/sim/tb/flow_led.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Verilog/CX/flow_led/sim/tb/flow_led.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vflow_led_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 0cffNfGeD3koOD0@B>QhX3
+IPdBM2iELB:[OnXaU;O5nR3
+R1
+w1533021686
+8E:/Verilog/CX/flow_led/sim/tb/flow_led_tb.v
+FE:/Verilog/CX/flow_led/sim/tb/flow_led_tb.v
+L0 3
+R2
+!s108 1547693658.279000
+!s107 E:/Verilog/CX/flow_led/sim/tb/flow_led_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/Verilog/CX/flow_led/sim/tb/flow_led_tb.v|
+!i113 0
+R3

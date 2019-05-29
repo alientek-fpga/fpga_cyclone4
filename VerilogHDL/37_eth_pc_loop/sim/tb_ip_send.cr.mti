@@ -1,0 +1,8 @@
+E:/WarShip_Develop/EP4CE10/Project/eth_pc_loop/sim/tb/tb_ip_send.v {1 {vlog -work work -novopt -stats=none E:/WarShip_Develop/EP4CE10/Project/eth_pc_loop/sim/tb/tb_ip_send.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_ip_send
+
+Top level modules:
+	tb_ip_send
+
+} {} {}}

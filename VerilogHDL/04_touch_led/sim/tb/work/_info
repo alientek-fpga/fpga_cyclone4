@@ -1,0 +1,57 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\modelsim\examples
+T_opt
+V8@39Y0_84Vz^icc3c8k7M3
+Z1 04 12 4 work tb_touch_led fast 0
+Z2 =1-502b73ec3293-5af1989a-31f-fe8
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 n@_opt
+Z5 OL;O;10.0c;49
+Z6 dD:\modelsim\examples
+T_opt1
+Z7 VV5FBkU5jT6B16O6Ic;Seo2
+Z8 04 9 4 work touch_led fast 0
+Z9 =1-502b73ec3293-5af196dd-2c8-4114
+R3
+Z10 n@_opt1
+R5
+R6
+vtb_touch_led
+Z11 INcj2HE[;aJMTZ26cgWP4X2
+Z12 V=bQ2:FU38aIb7dEZUE7>B3
+Z13 dC:\Users\Administrator\Desktop\touch_led\sim\tb
+Z14 w1525782669
+Z15 8C:\Users\Administrator\Desktop\touch_led\sim\tb\tb_touch_led.v
+Z16 FC:\Users\Administrator\Desktop\touch_led\sim\tb\tb_touch_led.v
+L0 2
+Z17 OL;L;10.0c;49
+r1
+31
+Z18 !s102 -nocovercells
+Z19 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|C:\Users\Administrator\Desktop\touch_led\sim\tb\tb_touch_led.v|
+Z21 !s100 PEe8mFEF9^`]`0kI18lR93
+Z22 !s108 1525782674.616000
+Z23 !s107 C:\Users\Administrator\Desktop\touch_led\sim\tb\tb_touch_led.v|
+!s85 0
+vtouch_led
+Z24 IA@?hT:TPoVdB4Xn>S>01a1
+Z25 VZ1cbAFJPW7l>VfQjOe_U82
+R13
+Z26 w1525765335
+Z27 8C:\Users\Administrator\Desktop\touch_led\rtl\touch_led.v
+Z28 FC:\Users\Administrator\Desktop\touch_led\rtl\touch_led.v
+L0 28
+R17
+r1
+31
+R18
+R19
+Z29 !s100 57@aYPkQh;amhfKIoJn_c2
+!s85 0
+Z30 !s108 1525782674.665000
+Z31 !s107 C:\Users\Administrator\Desktop\touch_led\rtl\touch_led.v|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|C:\Users\Administrator\Desktop\touch_led\rtl\touch_led.v|

@@ -1,0 +1,119 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+# Date created = 14:45:14  December 13, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FFT_audio_lcd_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+set_location_assignment PIN_E1 -to sys_clk
+set_location_assignment PIN_M1 -to rst_n
+set_location_assignment PIN_R1 -to lcd_bl
+set_location_assignment PIN_T2 -to lcd_de
+set_location_assignment PIN_T3 -to lcd_hs
+set_location_assignment PIN_P3 -to lcd_vs
+set_location_assignment PIN_R3 -to lcd_pclk
+set_location_assignment PIN_T4 -to lcd_rgb[4]
+set_location_assignment PIN_R4 -to lcd_rgb[3]
+set_location_assignment PIN_L1 -to lcd_rst
+set_location_assignment PIN_R5 -to lcd_rgb[1]
+set_location_assignment PIN_T5 -to lcd_rgb[2]
+set_location_assignment PIN_T6 -to lcd_rgb[0]
+set_location_assignment PIN_R6 -to lcd_rgb[10]
+set_location_assignment PIN_T7 -to lcd_rgb[9]
+set_location_assignment PIN_R7 -to lcd_rgb[8]
+set_location_assignment PIN_T8 -to lcd_rgb[7]
+set_location_assignment PIN_R8 -to lcd_rgb[6]
+set_location_assignment PIN_T9 -to lcd_rgb[5]
+set_location_assignment PIN_R9 -to lcd_rgb[15]
+set_location_assignment PIN_T10 -to lcd_rgb[14]
+set_location_assignment PIN_R10 -to lcd_rgb[13]
+set_location_assignment PIN_T11 -to lcd_rgb[12]
+set_location_assignment PIN_R11 -to lcd_rgb[11]
+
+set_location_assignment PIN_D6 -to aud_adcdat
+set_location_assignment PIN_C6 -to aud_dacdat
+set_location_assignment PIN_E6 -to aud_lrc
+set_location_assignment PIN_D5 -to aud_bclk
+set_location_assignment PIN_D8 -to aud_scl
+set_location_assignment PIN_C8 -to aud_sda
+set_location_assignment PIN_E7 -to aud_mclk
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY FIR_audio_lcd
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:45:14  DECEMBER 13, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_location_assignment PIN_E16 -to key0
+set_global_assignment -name VERILOG_FILE ../rtl/FIR_audio_lcd.v
+set_global_assignment -name SDC_FILE FIR_audio_lcd.out.sdc
+set_global_assignment -name VERILOG_FILE ../rtl/FFT/data_modulus.v
+set_global_assignment -name QIP_FILE ipcore/sqrt.qip
+set_global_assignment -name VERILOG_FILE ../rtl/LCD/lcd_rgb_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/LCD/lcd_driver.v
+set_global_assignment -name VERILOG_FILE ../rtl/LCD/lcd_display.v
+set_global_assignment -name VERILOG_FILE ../rtl/LCD/fifo_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/FFT/FFT_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/FFT/fft_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/wm8978_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/wm8978_config.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/i2c_reg_cfg.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/i2c_dri.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/audio_speak.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/audio_send.v
+set_global_assignment -name VERILOG_FILE ../rtl/WM8978/audio_receive.v
+set_global_assignment -name QIP_FILE ipcore/pll.qip
+set_global_assignment -name QIP_FILE ipcore/FFT/FFT.qip
+set_global_assignment -name QIP_FILE ipcore/audio_in_fifo.qip
+set_global_assignment -name VERILOG_FILE ../rtl/LCD/LCD_top.v
+set_global_assignment -name QIP_FILE ipcore/FFT_LCD_FIFO.qip
+set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name QIP_FILE ipcore/FIR/fir_lowpass.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
