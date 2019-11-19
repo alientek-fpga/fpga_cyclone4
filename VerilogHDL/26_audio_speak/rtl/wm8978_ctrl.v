@@ -23,17 +23,17 @@ module wm8978_ctrl(
     input                clk        ,   // 时钟信号
     input                rst_n      ,   // 复位信号
     
-    //audio interface(mast  
+    //audio interface
     input                aud_bclk   ,   // WM8978位时钟
     input                aud_lrc    ,   // 对齐信号
     input                aud_adcdat ,   // 音频输入
     output               aud_dacdat ,   // 音频输出
     
-    //control interfac  
+    //control interface  
     output               aud_scl    ,   // WM8978的SCL信号
     inout                aud_sda    ,   // WM8978的SDA信号
     
-    //user i    
+    //user interface
     output     [31:0]    adc_data   ,   // 输入的音频数据
     input      [31:0]    dac_data   ,   // 输出的音频数据
     output               rx_done    ,   // 一次采集完成

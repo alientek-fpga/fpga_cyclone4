@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Full Version"
 
--- DATE "09/09/2018 17:02:51"
+-- DATE "11/19/2019 10:43:40"
 
 -- 
 -- Device: Altera EP4CE10F17C8 Package FBGA256
@@ -37,13 +37,13 @@ ENTITY 	lcd_rgb_char IS
     PORT (
 	sys_clk : IN std_logic;
 	sys_rst_n : IN std_logic;
-	lcd_hs : BUFFER std_logic;
-	lcd_vs : BUFFER std_logic;
-	lcd_de : BUFFER std_logic;
-	lcd_rgb : BUFFER std_logic_vector(15 DOWNTO 0);
-	lcd_bl : BUFFER std_logic;
-	lcd_rst : BUFFER std_logic;
-	lcd_pclk : BUFFER std_logic
+	lcd_hs : OUT std_logic;
+	lcd_vs : OUT std_logic;
+	lcd_de : OUT std_logic;
+	lcd_rgb : OUT std_logic_vector(15 DOWNTO 0);
+	lcd_bl : OUT std_logic;
+	lcd_rst : OUT std_logic;
+	lcd_pclk : OUT std_logic
 	);
 END lcd_rgb_char;
 
@@ -463,8 +463,8 @@ SIGNAL \u_lcd_driver|lcd_rgb[0]~0_combout\ : std_logic;
 SIGNAL \u_lcd_driver|lcd_rgb[11]~1_combout\ : std_logic;
 SIGNAL \u_lcd_display|pixel_data\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \u_lcd_pll|altpll_component|auto_generated|wire_pll1_clk\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \u_lcd_driver|cnt_h\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \u_lcd_driver|cnt_v\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \u_lcd_driver|cnt_h\ : std_logic_vector(10 DOWNTO 0);
 SIGNAL \ALT_INV_rst_n_w~0clkctrl_outclk\ : std_logic;
 SIGNAL \ALT_INV_sys_rst_n~inputclkctrl_outclk\ : std_logic;
 

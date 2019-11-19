@@ -46,7 +46,7 @@ module top_digital_recognition(
     output                lcd_hs      ,  //LCD 行同步信号
     output                lcd_vs      ,  //LCD 场同步信号
     output                lcd_de      ,  //LCD 数据输入使能
-    inout        [15:0]   lcd_rgb     ,  //LCD RGB565颜色数据
+    output       [15:0]   lcd_rgb     ,  //LCD RGB565颜色数据
     output                lcd_bl      ,  //LCD 背光控制信号
     output                lcd_rst     ,  //LCD 复位信号
     output                lcd_pclk    ,  //LCD 采样时钟
@@ -62,19 +62,21 @@ parameter  CLK_FREQ   = 27'd100_000_000; //i2c_dri模块的驱动时钟频率
 parameter  I2C_FREQ   = 18'd250_000   ;  //I2C的SCL时钟频率,不超过400KHz
 parameter  NUM_ROW    = 1'd1          ;  //需识别的图像的行数
 parameter  NUM_COL    = 3'd4          ;  //需识别的图像的列数
-parameter  H_PIXEL    = 480           ;  //图像的水平像素
-parameter  V_PIXEL    = 272           ;  //图像的垂直像素
+parameter  H_PIXEL    = 800           ;  //图像的水平像素
+parameter  V_PIXEL    = 480           ;  //图像的垂直像素
 parameter  DEPBIT     = 4'd10         ;  //数据位宽
 //LCD ID
-parameter  ID_4342 =   0;
-parameter  ID_7084 =   1;
-parameter  ID_7016 =   2;
-parameter  ID_1018 =   5;
+localparam  ID_4342 =   0;					  //4寸屏幕，分辨率：480*272					  
+localparam  ID_7084 =   1;					  //7寸屏幕，分辨率：800*480
+localparam  ID_7016 =   2;					  //7寸屏幕，分辨率：1024*600
+localparam  ID_1018 =   5;					  //10.1寸屏幕，分辨率：1280*800
+parameter   ID_LCD = ID_7084;            //对于不同的LCd屏幕修改，赋ID_LCD对应的值即可
 
 //wire define
 wire                  clk_100m        ;  //100mhz时钟,SDRAM操作时钟
 wire                  clk_100m_shift  ;  //100mhz时钟,SDRAM相位偏移时钟
-wire                  lcd_clk         ;  //lcd驱动时钟
+wire                  clk_100m_lcd    ;  //100mhz时钟
+wire                  clk_lcd         ;  //提供给IIC驱动时钟和lcd驱动时钟
 wire                  locked          ;
 wire                  rst_n           ;
 
@@ -93,6 +95,7 @@ wire   [15:0]         rd_data         ;  //sdram_ctrl模块读数据
 wire                  sdram_init_done ;  //SDRAM初始化完成
 wire                  sys_init_done   ;  //系统初始化完成(sdram初始化+摄像头初始化)
 
+wire   [15:0]         ID_lcd          ;  //LCD的ID
 wire   [12:0]         cmos_h_pixel    ;  //CMOS水平方向像素个数
 wire   [12:0]         cmos_v_pixel    ;  //CMOS垂直方向像素个数
 wire   [12:0]         total_h_pixel   ;  //水平总像素大小
@@ -126,7 +129,7 @@ pll u_pll(
     .inclk0       (sys_clk),
     .c0           (clk_100m),
     .c1           (clk_100m_shift),
-    .c2           (lcd_clk),
+    .c2           (clk_100m_lcd),
     .locked       (locked)
 );
 
@@ -154,7 +157,7 @@ i2c_dri
     .I2C_FREQ             (I2C_FREQ  )
     )
    u_i2c_dri(
-    .clk                  (clk_100m ),
+    .clk                  (clk_100m_lcd),
     .rst_n                (rst_n     ),
     //i2c interface
     .i2c_exec             (i2c_exec  ),
@@ -187,7 +190,7 @@ cmos_capture_data u_cmos_capture_data(
 picture_size u_picture_size (
     .rst_n                (rst_n         ),
 
-    .lcd_id               (ID_4342       ),   //LCD的ID，用于配置摄像头的图像大小
+    .ID_lcd               (ID_LCD        ),   //LCD的ID，用于配置摄像头的图像大小
 
     .cmos_h_pixel         (cmos_h_pixel  ),   //CMOS水平方向像素个数
     .cmos_v_pixel         (cmos_v_pixel  ),   //CMOS垂直方向像素个数
@@ -213,7 +216,7 @@ sdram_top u_sdram_top(
     .wr_load      (~rst_n),                   //写端口复位: 复位写地址,清空写FIFO
 
     //用户读端口
-    .rd_clk       (lcd_clk),                  //读端口FIFO: 读时钟
+    .rd_clk       (clk_lcd),                  //读端口FIFO: 读时钟
     .rd_en        (rd_en),                    //读端口FIFO: 读使能
     .rd_data      (rd_data),                  //读端口FIFO: 读数据
     .rd_min_addr  (24'd0),                    //读SDRAM的起始地址
@@ -240,8 +243,8 @@ sdram_top u_sdram_top(
 );
 
 //例化LCD顶层模块
-lcd_driver u_lcd_driver(
-    .lcd_clk    (lcd_clk),
+lcd u_lcd(
+    .clk        (clk_100m_lcd),
     .rst_n      (rst_n),
 
     .lcd_hs     (hs_t ),
@@ -252,9 +255,12 @@ lcd_driver u_lcd_driver(
     .lcd_rst    (lcd_rst),
     .lcd_pclk   (lcd_pclk),
 
-    .lcd_data   (rd_data),
-    .data_req   (rd_en  ),
+    .clk_lcd    (clk_lcd),
 
+    .pixel_data (rd_data),
+    .rd_en      (rd_en  ),
+
+    .ID_lcd     (ID_LCD),
     //user interface
     .pixel_xpos (xpos  ),
     .pixel_ypos (ypos  )
@@ -267,7 +273,7 @@ vip #(
     .V_PIXEL(V_PIXEL)
 )u_vip(
     //module clock
-    .clk              (lcd_clk),  // 时钟信号
+    .clk              (clk_lcd),  // 时钟信号
     .rst_n            (rst_n  ),  // 复位信号（低有效）
     //图像处理前的数据接口
     .pre_frame_vsync  (vs_t   ),
@@ -288,7 +294,7 @@ vip #(
 //例化数码管驱动模块
 seg_bcd_dri u_seg_bcd_dri(
    //input
-   .clk          (lcd_clk),       // 时钟信号
+   .clk          (clk_lcd),       // 时钟信号
    .rst_n        (rst_n  ),       // 复位信号
    .num          (digit  ),       // 6个数码管要显示的数值
    .point        (6'b0   ),       // 小数点具体显示的位置,从高到低,高有效

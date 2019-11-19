@@ -105,7 +105,7 @@ always @(*) begin
         num_col = num_col_t;
         num_row = num_row_t;
      end
-      else begin
+	  else begin
         num_col = num_col;
         num_row = num_row;
      end
@@ -175,14 +175,14 @@ end
 //状态任务
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n) begin
-        h_we    <=  1'b0;
+        h_we    <= 1'b0;
         h_waddr <= 11'b0;
         h_raddr <= 11'b0;
-        h_di    <=  1'b0;
-        v_we    <=  1'b0;
+        h_di    <= 1'b0;
+        v_we    <= 1'b0;
         v_waddr <= 11'b0;
         v_raddr <= 11'b0;
-        v_di    <=  1'b0;
+        v_di    <= 1'b0;
         cnt     <= 11'd0;
         num_col_t <=4'b0;
         num_row_t <=4'b0;
@@ -220,10 +220,10 @@ always @(posedge clk or negedge rst_n) begin
         st_project:begin
             if(frame_de &&(!monoc)) begin
                 h_we <= 1'b1;
-                h_waddr <= xpos;
+                h_waddr <= ypos;
                 h_di <= 1'b1;
                 v_we <= 1'b1;
-                v_waddr <= ypos;
+                v_waddr <= xpos;
                 v_di <= 1'b1;
             end
             else begin

@@ -39,6 +39,8 @@ wire      [7:0]    rd_data;              //ROM读出的数据
 //**                    main code
 //*****************************************************
 
+assign da_data = 'd10;
+
 //DA数据发送
 da_wave_send u_da_wave_send(
     .clk         (sys_clk), 
@@ -46,7 +48,7 @@ da_wave_send u_da_wave_send(
     .rd_data     (rd_data),
     .rd_addr     (rd_addr),
     .da_clk      (da_clk),  
-    .da_data     (da_data)
+    .da_data     ()//da_data
     );
 
 //ROM存储波形
