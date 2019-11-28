@@ -52,13 +52,13 @@ module projection #(
 );
 
 //localparam define
-localparam st_init    = 3'b001;
-localparam st_project = 3'b010;
-localparam st_process = 3'b100;
+localparam st_init    = 2'b00;
+localparam st_project = 2'b01;
+localparam st_process = 2'b10;
 
 //reg define
-reg [ 4:0]          cur_state         ;
-reg [ 4:0]          nxt_state         ;
+reg [ 1:0]          cur_state         ;
+reg [ 1:0]          nxt_state         ;
 reg [10:0]          cnt               ;
 reg                 h_we              ;
 reg [10:0]          h_waddr           ;
@@ -133,9 +133,9 @@ end
 //帧计数
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)
-        frame_cnt <=2'd0;
+        frame_cnt <= 2'd0;
     else if(frame_cnt == 2'd3)
-        frame_cnt <=2'd0;
+        frame_cnt <= 2'd0;
     else if(frame_vsync_fall)
         frame_cnt <= frame_cnt + 1'd1;
 end
@@ -220,10 +220,10 @@ always @(posedge clk or negedge rst_n) begin
         st_project:begin
             if(frame_de &&(!monoc)) begin
                 h_we <= 1'b1;
-                h_waddr <= ypos;
+                h_waddr <= xpos;
                 h_di <= 1'b1;
                 v_we <= 1'b1;
-                v_waddr <= xpos;
+                v_waddr <= ypos;
                 v_di <= 1'b1;
             end
             else begin
@@ -243,34 +243,33 @@ always @(posedge clk or negedge rst_n) begin
                 h_raddr <= h_raddr + 1'b1;
                 v_raddr <= (v_raddr == V_PIXEL) ? v_raddr : (v_raddr + 1'b1);
                 project_done_flag <= 1'b0;
-
             end
             if(h_rise) begin
                 num_col_t <= num_col_t + 1'b1;
                 col_border_addr_wr <= col_border_addr_wr + 1'b1;
                 col_border_data_wr <= h_raddr - 2'd2;
-                col_border_ram_we <= 1'b1;
+                col_border_ram_we  <= 1'b1;
             end
             else if(h_fall) begin
                 col_border_addr_wr <= col_border_addr_wr + 1'b1;
                 col_border_data_wr <= h_raddr + 2'd2;
-                col_border_ram_we <= 1'b1;
+                col_border_ram_we  <= 1'b1;
             end
-                else
+            else
                 col_border_ram_we <= 1'b0;
             if(v_rise) begin
                 num_row_t <= num_row_t + 1'b1;
                 row_border_addr_wr <= row_border_addr_wr + 1'b1;
                 row_border_data_wr <= v_raddr - 2'd2;
-                row_border_ram_we <= 1'b1;
+                row_border_ram_we  <= 1'b1;
             end
-                else if(v_fall) begin
+            else if(v_fall) begin
                 row_border_addr_wr <= row_border_addr_wr + 1'b1;
                 row_border_data_wr <= v_raddr + 2'd2;
-                row_border_ram_we <= 1'b1;
+                row_border_ram_we  <= 1'b1;
             end
             else
-                row_border_ram_we <= 1'b0;
+                row_border_ram_we  <= 1'b0;
         end
     endcase
 end

@@ -9,7 +9,7 @@
 // File name:           top_digital_recognition
 // Last modified Date:  2018/11/2 13:58:23
 // Last Version:        V1.0
-// Descriptions:        OV5640 摄像头RGB TFT-LCD显示实验
+// Descriptions:        基于几何特征的数字识别实验
 //----------------------------------------------------------------------------------------
 // Created by:          正点原子
 // Created date:        2018/3/21 13:58:23
@@ -51,8 +51,8 @@ module top_digital_recognition(
     output                lcd_rst     ,  //LCD 复位信号
     output                lcd_pclk    ,  //LCD 采样时钟
     //seg led
-    output   [5:0]  sel               ,  //数码管位选
-    output   [7:0]  seg_led              //数码管段选
+    output       [5:0]    sel         ,  //数码管位选
+    output       [7:0]    seg_led        //数码管段选
     );
 
 //parameter define
@@ -62,15 +62,15 @@ parameter  CLK_FREQ   = 27'd100_000_000; //i2c_dri模块的驱动时钟频率
 parameter  I2C_FREQ   = 18'd250_000   ;  //I2C的SCL时钟频率,不超过400KHz
 parameter  NUM_ROW    = 1'd1          ;  //需识别的图像的行数
 parameter  NUM_COL    = 3'd4          ;  //需识别的图像的列数
-parameter  H_PIXEL    = 800           ;  //图像的水平像素
-parameter  V_PIXEL    = 480           ;  //图像的垂直像素
+parameter  H_PIXEL    = 480           ;  //图像的水平像素
+parameter  V_PIXEL    = 272           ;  //图像的垂直像素
 parameter  DEPBIT     = 4'd10         ;  //数据位宽
 //LCD ID
-localparam  ID_4342 =   0;					  //4寸屏幕，分辨率：480*272					  
-localparam  ID_7084 =   1;					  //7寸屏幕，分辨率：800*480
-localparam  ID_7016 =   2;					  //7寸屏幕，分辨率：1024*600
-localparam  ID_1018 =   5;					  //10.1寸屏幕，分辨率：1280*800
-parameter   ID_LCD = ID_7084;            //对于不同的LCd屏幕修改，赋ID_LCD对应的值即可
+localparam  ID_4342 =   0;               //4寸屏幕，分辨率：480*272
+localparam  ID_7084 =   1;               //7寸屏幕，分辨率：800*480
+localparam  ID_7016 =   2;               //7寸屏幕，分辨率：1024*600
+localparam  ID_1018 =   5;               //10.1寸屏幕，分辨率：1280*800
+parameter   ID_LCD = ID_4342;            //对于不同的LCd屏幕修改，赋ID_LCD对应的值即可
 
 //wire define
 wire                  clk_100m        ;  //100mhz时钟,SDRAM操作时钟
@@ -101,7 +101,7 @@ wire   [12:0]         cmos_v_pixel    ;  //CMOS垂直方向像素个数
 wire   [12:0]         total_h_pixel   ;  //水平总像素大小
 wire   [12:0]         total_v_pixel   ;  //垂直总像素大小
 wire   [23:0]         sdram_max_addr  ;  //sdram读写的最大地址
-
+wire                  clk_lcd_g       ;
 wire   [23:0]         digit           ;  //识别到的数字
 wire   [15:0]         color_rgb       ;
 wire   [10:0]         xpos            ;  //像素点横坐标
@@ -162,7 +162,7 @@ i2c_dri
     //i2c interface
     .i2c_exec             (i2c_exec  ),
     .bit_ctrl             (BIT_CTRL  ),
-    .i2c_rh_wl            (i2c_rh_wl ),               //固定为0，只用到了IIC驱动的写操作
+    .i2c_rh_wl            (i2c_rh_wl ),             //固定为0，只用到了IIC驱动的写操作
     .i2c_addr             (i2c_data[23:8]),
     .i2c_data_w           (i2c_data[7:0]),
     .i2c_data_r           (i2c_data_r),
@@ -170,20 +170,20 @@ i2c_dri
     .scl                  (cam_scl   ),
     .sda                  (cam_sda   ),
     //user interface
-    .dri_clk              (i2c_dri_clk)              //I2C操作时钟
+    .dri_clk              (i2c_dri_clk)             //I2C操作时钟
 );
 
 //CMOS图像数据采集模块
 cmos_capture_data u_cmos_capture_data(
-    .rst_n                (rst_n & sys_init_done), //系统初始化完成之后再开始采集数据
+    .rst_n                (rst_n & sys_init_done),  //系统初始化完成之后再开始采集数据
     .cam_pclk             (cam_pclk),
     .cam_vsync            (cam_vsync),
     .cam_href             (cam_href),
     .cam_data             (cam_data),
     .cmos_frame_vsync     (),
     .cmos_frame_href      (),
-    .cmos_frame_clken     (wr_en),            //数据有效使能信号
-    .cmos_frame_data      (wr_data)           //有效数据
+    .cmos_frame_clken     (wr_en),                  //数据有效使能信号
+    .cmos_frame_data      (wr_data)                 //有效数据
 );
 
 //摄像头图像分辨率设置模块
@@ -266,6 +266,13 @@ lcd u_lcd(
     .pixel_ypos (ypos  )
 );
 
+//例化全局时钟模块
+altclkctrl clk_ctrl(
+    .inclk(clk_lcd),
+    .outclk(clk_lcd_g)
+);
+
+//图像处理模块
 vip #(
     .NUM_ROW(NUM_ROW),
     .NUM_COL(NUM_COL),
@@ -273,8 +280,8 @@ vip #(
     .V_PIXEL(V_PIXEL)
 )u_vip(
     //module clock
-    .clk              (clk_lcd),  // 时钟信号
-    .rst_n            (rst_n  ),  // 复位信号（低有效）
+    .clk              (clk_lcd_g),  // 时钟信号
+    .rst_n            (rst_n    ),  // 复位信号（低有效）
     //图像处理前的数据接口
     .pre_frame_vsync  (vs_t   ),
     .pre_frame_hsync  (hs_t   ),

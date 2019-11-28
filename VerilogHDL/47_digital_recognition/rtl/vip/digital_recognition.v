@@ -227,18 +227,18 @@ end
 
 //行区域
 always @(*) begin
-    row_area[row_cnt] = xpos >= row_border_low && xpos <= row_border_hgh;
+    row_area[row_cnt] = ypos >= row_border_low && ypos <= row_border_hgh;
 end
 
 //列区域
 always @(*) begin
-    col_area[col_cnt] = ypos >= col_border_l   && ypos <= col_border_r;
+    col_area[col_cnt] = xpos >= col_border_l   && xpos <= col_border_r;
 end
 
 //确定col_cnt
 always @(posedge clk) begin
     if(project_done_flag) begin
-        if(row_area[row_cnt] && ypos == col_border_r)
+        if(row_area[row_cnt] && xpos == col_border_r)
             col_cnt <= col_cnt == num_col - 1'b1 ? 'd0 : col_cnt + 1'b1;
     end
     else
@@ -248,7 +248,7 @@ end
 //确定row_cnt
 always @(posedge clk) begin
     if(project_done_flag) begin
-        if(xpos == row_border_hgh + 1'b1)
+        if(ypos == row_border_hgh + 1'b1)
             row_cnt <= row_cnt == num_row - 1'b1 ? 'd0 : row_cnt + 1'b1;
     end
     else
@@ -270,16 +270,16 @@ end
 //x1与x2的特征数
 always @(posedge clk) begin
     if(feature_deal) begin
-        if(xpos == v25) begin
-            if(ypos >= col_border_l && ypos <= cent_y && monoc_fall)
+        if(ypos == v25) begin
+            if(xpos >= col_border_l && xpos <= cent_y && monoc_fall)
                 x1_l[num_cnt] <= 1'b1;
-            else if(ypos > cent_y && ypos < col_border_r && monoc_fall)
+            else if(xpos > cent_y && xpos < col_border_r && monoc_fall)
                 x1_r[num_cnt] <= 1'b1;
         end
-        else if(xpos == v23) begin
-            if(ypos >= col_border_l && ypos <= cent_y && monoc_fall)
+        else if(ypos == v23) begin
+            if(xpos >= col_border_l && xpos <= cent_y && monoc_fall)
                 x2_l[num_cnt] <= 1'b1;
-            else if(ypos > cent_y && ypos < col_border_r && monoc_fall)
+            else if(xpos > cent_y && xpos < col_border_r && monoc_fall)
                 x2_r[num_cnt] <= 1'b1;
         end
     end
@@ -294,7 +294,7 @@ end
 //寄存y_flag，找下降沿
 always @(posedge clk) begin
     if(feature_deal) begin
-        if(row_area[row_cnt] && ypos == cent_y)
+        if(row_area[row_cnt] && xpos == cent_y)
             y_flag[num_cnt] <= {y_flag[num_cnt][0],monoc};
     end
     else
@@ -304,7 +304,7 @@ end
 //Y方向的特征数
 always @(posedge clk) begin
     if(feature_deal) begin
-        if(ypos == cent_y + 1'b1 && y_flag_fall)
+        if(xpos == cent_y + 1'b1 && y_flag_fall)
             y[num_cnt] <= y[num_cnt] + 1'd1;
     end
     else
@@ -330,7 +330,7 @@ end
 
 //识别数字
 always @(posedge clk) begin
-    if(feature_deal && xpos == row_border_hgh + 1'b1) begin
+    if(feature_deal && ypos == row_border_hgh + 1'b1) begin
         if(real_num_total == 1'b1)
             digit_t <= digit_id;
         else if(digit_cnt < real_num_total) begin
@@ -354,11 +354,11 @@ end
 always @(posedge clk or negedge rst_n) begin
     if(!rst_n)
         color_rgb <= 16'h0000;
-    else if(row_area[row_cnt] && ( ypos == col_border_l || ypos == col_border_r ||
-            ypos == (col_border_l -1) || ypos == (col_border_r+1)))
+    else if(row_area[row_cnt] && ( xpos == col_border_l || xpos == col_border_r ||
+            xpos == (col_border_l -1) || xpos == (col_border_r+1)))
         color_rgb <= 16'hf800; //左右竖直边界线
-    else if(col_area[col_cnt] && (xpos == row_border_low || xpos== row_border_hgh ||
-            xpos==( row_border_low - 1) || xpos== (row_border_hgh + 1)))
+    else if(col_area[col_cnt] && (ypos == row_border_low || ypos== row_border_hgh ||
+            ypos==( row_border_low - 1) || ypos== (row_border_hgh + 1)))
         color_rgb <= 16'hf800; //上下水平边界线
     else if(monoc)
         color_rgb <= 16'hffff; //white
