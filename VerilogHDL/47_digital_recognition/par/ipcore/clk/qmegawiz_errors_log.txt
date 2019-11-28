@@ -1,0 +1,7 @@
+
+
+G:/gitoffice/fpga_cyclone4/VerilogHDL/47_digital_recognition/par/ipcore/clk/altclkctrl.v
+
+Nov 28 03PM:11:04>: Variation file name (altclkctrl) is identical with the name of one of its sub-components.
+
+MegaWizard Plug-In Manager will rename the variation to "altclkctra" to prevent compilation errors
