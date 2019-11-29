@@ -39,14 +39,14 @@ module vip(
     output   [15:0] post_rgb        ,  // RGB565颜色数据
 
     //user interface
+	 input   [10:0]  h_total_pexel   ,
+	 input   [10:0]  v_total_pexel   ,
     output  [23:0]  digit              // 识别到的数字
 );
 
 //parameter define
 parameter NUM_ROW = 1  ;               // 需识别的图像的行数
 parameter NUM_COL = 4  ;               // 需识别的图像的列数
-parameter H_PIXEL = 480;               // 图像的水平像素
-parameter V_PIXEL = 272;               // 图像的垂直像素
 parameter DEPBIT  = 10 ;               // 数据位宽
 
 //wire define
@@ -113,8 +113,6 @@ binarization u_binarization(
 projection #(
     .NUM_ROW(NUM_ROW),
     .NUM_COL(NUM_COL),
-    .H_PIXEL(H_PIXEL),
-    .V_PIXEL(V_PIXEL),
     .DEPBIT (DEPBIT)
 ) u_projection(
     //module clock
@@ -133,6 +131,8 @@ projection #(
     .col_border_addr_rd (col_border_addr),
     .col_border_data_rd (col_border_data),
     //user interface
+	 .h_total_pexel      (h_total_pexel),    
+	 .v_total_pexel      (v_total_pexel),
     .num_col            (num_col),
     .num_row            (num_row),
     .frame_cnt          (frame_cnt),
@@ -143,8 +143,6 @@ projection #(
 digital_recognition #(
     .NUM_ROW(NUM_ROW),
     .NUM_COL(NUM_COL),
-    .H_PIXEL(H_PIXEL),
-    .V_PIXEL(V_PIXEL),
     .NUM_WIDTH((NUM_ROW*NUM_COL<<2)-1)
 )u_digital_recognition(
     //module clock

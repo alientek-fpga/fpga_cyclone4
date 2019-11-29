@@ -22,8 +22,8 @@
 module projection #(
     parameter NUM_ROW =  1 ,
     parameter NUM_COL =  4 ,
-    parameter H_PIXEL = 480,
-    parameter V_PIXEL = 272,
+    parameter H_PIXEL = 1280,
+    parameter V_PIXEL = 800 ,
     parameter DEPBIT  = 10
 )(
     //module clock
@@ -45,9 +45,11 @@ module projection #(
     output        [DEPBIT-1:0] col_border_data_rd,
 
     //user interface
-    output   reg    [3:0]      num_col           ,    // 采集到的数字列数
-    output   reg    [3:0]      num_row           ,    // 采集到的数字行数
-    output   reg    [1:0]      frame_cnt         ,    // 当前帧
+	 input         [10:0]       h_total_pexel     ,
+	 input         [10:0]       v_total_pexel     ,
+    output   reg  [ 3:0]       num_col           ,    // 采集到的数字列数
+    output   reg  [ 3:0]       num_row           ,    // 采集到的数字行数
+    output   reg  [ 1:0]       frame_cnt         ,    // 当前帧
     output   reg               project_done_flag      // 投影完成标志
 );
 
@@ -192,7 +194,7 @@ always @(posedge clk or negedge rst_n) begin
     end
     else case(nxt_state)
         st_init: begin
-            if(cnt == H_PIXEL) begin
+            if(cnt == h_total_pexel) begin
                 cnt     <=  'd0;
                 h_we    <= 1'b0;
                 h_waddr <=  'd0;
@@ -236,12 +238,12 @@ always @(posedge clk or negedge rst_n) begin
             end
         end
         st_process:begin
-            if(h_raddr == H_PIXEL)
+            if(h_raddr == h_total_pexel)
                 project_done_flag <= 1'b1;
             else begin
                 cnt <= 'd0;
                 h_raddr <= h_raddr + 1'b1;
-                v_raddr <= (v_raddr == V_PIXEL) ? v_raddr : (v_raddr + 1'b1);
+                v_raddr <= (v_raddr == v_total_pexel) ? v_raddr : (v_raddr + 1'b1);
                 project_done_flag <= 1'b0;
             end
             if(h_rise) begin

@@ -22,8 +22,6 @@
 module digital_recognition #(
     parameter NUM_ROW =  1 ,
     parameter NUM_COL =  4 ,
-    parameter H_PIXEL = 480,
-    parameter V_PIXEL = 272,
     parameter NUM_WIDTH = (NUM_ROW*NUM_COL<<2)-1
 )(
     //module clock

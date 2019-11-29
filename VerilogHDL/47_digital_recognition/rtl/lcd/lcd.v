@@ -36,41 +36,49 @@ module lcd(
     output             lcd_bl  ,       //LCD 背光控制信号
     output             lcd_rst ,       //LCD 复位信号
     output             lcd_pclk,       //LCD 采样时钟
-       
-    output             clk_lcd,
-    input      [15:0]  pixel_data,     //像素点数据
-    
-    output             rd_en  ,        //请求像素点颜色数据输入 
-
-    input     [15:0]   ID_lcd ,        //LCD的ID
+    output     [15:0]  ID_lcd ,        //LCD的ID
     
     //user interface
+	 output             clk_lcd,
+    input      [15:0]  pixel_data,     //像素点数据
+    output     [15:0]  pre_rgb, 
+	 input      [15:0]  post_rgb,
+	 input      [15:0]  post_de,	 
+    output             rd_en  ,        //请求像素点颜色数据输入 
     output     [10:0]  pixel_xpos,
     output     [10:0]  pixel_ypos
 );
+
+wire   clk_lcd_l;
 
 //*****************************************************
 //**                    main code
 //*****************************************************
 
 //RGB565数据输出                 
-assign lcd_rgb = lcd_de ? pixel_data : 16'dz;
+assign lcd_rgb = post_de ? post_rgb   : 16'dz;
+assign pre_rgb = lcd_de  ? pixel_data : 16'dz;
 
 //读rgb lcd ID 模块
-//rd_id    u_rd_id(
-//    .clk          (clk),
-//    .rst_n        (rst_n),
-//    .lcd_rgb      (lcd_rgb),
-//    .ID_lcd       (ID_lcd)
-//
-//);
+rd_id   u_rd_id(
+    .clk          (clk),
+    .rst_n        (rst_n),
+    .lcd_rgb      (lcd_rgb),
+    .ID_lcd       (ID_lcd)
+);
 
 //分频模块，根据不同的LCD ID输出相应的频率的驱动时钟
 clk_div  u_clk_div(
     .clk          (clk),
     .rst_n        (rst_n),
     .ID_lcd       (ID_lcd),
-    .clk_lcd      (clk_lcd)
+    .clk_lcd      (clk_lcd_l)
+);
+
+//例化全局时钟模块
+altclkctrl clk_ctrl(
+    .inclk(clk_lcd_l),
+    .outclk(clk_lcd)
 );
 
 //lcd驱动模块    
